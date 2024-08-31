@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="1288.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AggiungiController">
+    <children>
+        <BorderPane layoutY="83.0" prefHeight="811.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane minHeight="10.0" minWidth="10.0" prefHeight="81.0" prefWidth="1302.0" style="-fx-background-color: #313135;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="314.0" layoutY="14.0" prefHeight="53.0" prefWidth="673.0" text="PROGRAMMA GESTIONALE DISCOTYECA" textFill="#c9c7c9">
+                            <font>
+                                <Font size="36.0" />
+                            </font></Label>
+                        <Button layoutY="4.0" mnemonicParsing="false" onAction="#home" prefHeight="73.0" prefWidth="86.0" style="-fx-background-color: #313135 #313135;" stylesheets="@stylesheets/button_menu.css" text="Button">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="53.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnLog" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="1229.0" layoutY="31.0" mnemonicParsing="false" onAction="#logout" onMouseEntered="#hoverLog" onMouseExited="#notHoverLog" prefHeight="34.0" prefWidth="42.0" style="-fx-background-color: #313135;" text="Button">
+                            <graphic>
+                                <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/logout-512.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane prefHeight="630.0" prefWidth="60.0" style="-fx-background-color: #313135;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnAdd" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="8.0" layoutY="32.0" mnemonicParsing="false" onAction="#aggiungi" onMouseEntered="#hoverAdd" onMouseExited="#notHoverAdd" prefHeight="110.0" prefWidth="73.0" style="-fx-background-color: #313135 #313135;" stylesheets="@stylesheets/button_menu.css" AnchorPane.leftAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/add_clicked.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnDel" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="-9.0" layoutY="143.0" mnemonicParsing="false" onAction="#cancella" onMouseEntered="#hoverDel" onMouseExited="#notHoverDel" prefHeight="110.0" prefWidth="82.0" style="-fx-background-color: #313135;" text="Button" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/trashbin.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnSea" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="254.0" mnemonicParsing="false" onAction="#cerca" onMouseEntered="#hoverSea" onMouseExited="#notHoverSea" prefHeight="110.0" prefWidth="74.0" style="-fx-background-color: #313135;" text="1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" translateX="2.0">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/find.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnSho" contentDisplay="GRAPHIC_ONLY" layoutX="-9.0" layoutY="365.0" mnemonicParsing="false" onAction="#mostraLista" onMouseEntered="#hoverSho" onMouseExited="#notHoverSho" prefHeight="110.0" prefWidth="82.0" style="-fx-background-color: #313135;" text="Button" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/list.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnMan" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="-1.0" layoutY="476.0" mnemonicParsing="false" onAction="#gestisciEntrata" onMouseEntered="#hoverMan" onMouseExited="#notHoverMan" prefHeight="110.0" prefWidth="74.0" style="-fx-background-color: #313135;" styleClass="btnc" text="Button" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="38.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/bodyguard.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="btnTyp" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="586.0" mnemonicParsing="false" onAction="#tipoSerata" onMouseEntered="#hoverTyp" onMouseExited="#notHoverTyp" prefHeight="110.0" prefWidth="72.0" style="-fx-background-color: #313135;" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/note.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children></AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3E3E42;" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="9.0" scaleX="2.2" style="-fx-background-color: #313135;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0">
+                            <rotationAxis>
+                                <Point3D />
+                            </rotationAxis></AnchorPane>
+                        <AnchorPane prefHeight="14.0" prefWidth="1172.0" style="-fx-background-color: #313135;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label layoutX="324.0" layoutY="42.0" text="Aggiungi pronotazione" textFill="#eeeeee">
+                            <font>
+                                <Font size="57.0" />
+                            </font></Label>
+                        <Label layoutX="310.0" layoutY="155.0" text="Nome" textFill="#eeeeee">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="310.0" layoutY="239.0" text="Cognome" textFill="#eeeeee">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="655.0" layoutY="247.0" text="Numero di telefono" textFill="#eeeeee">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="655.0" layoutY="155.0" text="Prenotazione" textFill="#eeeeee">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="nameField" layoutX="310.0" layoutY="200.0" prefHeight="26.0" prefWidth="270.0" />
+                        <TextField fx:id="surnameField" layoutX="310.0" layoutY="284.0" prefHeight="26.0" prefWidth="270.0" />
+                        <TextField fx:id="phoneField" layoutX="655.0" layoutY="292.0" prefWidth="270.0" />
+                        <ComboBox fx:id="reservationBox" layoutX="655.0" layoutY="200.0" prefWidth="270.0" />
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="615.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/reservation.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="615.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/phone.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="270.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/person.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="270.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/person.png" />
+                            </image>
+                        </ImageView>
+                        <Button layoutX="480.0" layoutY="415.0" mnemonicParsing="false" onAction="#submit" prefHeight="45.0" prefWidth="270.0" text="Aggiungi" textFill="#3e3e42">
+                            <font>
+                                <Font size="20.0" />
+                            </font></Button>
+                        <Label fx:id="reservationLabel" alignment="CENTER" layoutX="134.0" layoutY="482.0" prefHeight="58.0" prefWidth="961.0" text=" " textAlignment="CENTER" textFill="#eeeeee">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

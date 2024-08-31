@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3E3E42;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogoutController">
+   <children>
+      <Label layoutX="53.0" layoutY="48.0" prefHeight="81.0" prefWidth="495.0" text="Sei sicuro di voler fare il logout?" textFill="#eeeeee">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="164.0" layoutY="89.0" prefHeight="81.0" prefWidth="274.0" text="Dovrai rieseguire il login" textFill="#eeeeee">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button  onAction="#logoutYes" layoutX="91.0" layoutY="200.0" mnemonicParsing="false" prefHeight="122.0" prefWidth="147.0" style="-fx-background-color: #313135;" text="Sì" textFill="#eeeeee">
+         <font>
+            <Font size="43.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button  onAction="#logoutNo" layoutX="365.0" layoutY="200.0" mnemonicParsing="false" prefHeight="122.0" prefWidth="147.0" style="-fx-background-color: #313135;" text="No" textFill="#eeeeee">
+         <font>
+            <Font size="43.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
